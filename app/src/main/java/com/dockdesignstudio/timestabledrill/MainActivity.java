@@ -1,7 +1,9 @@
 package com.dockdesignstudio.timestabledrill;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,5 +15,12 @@ public class MainActivity extends AppCompatActivity {
         String question = number1.toString() + "X"+number2.toString();
 
         setContentView(R.layout.activity_main);
+    }
+
+    // call when start button tap
+    public void runDrill(View view){
+        // start times question
+        Intent intent = new Intent(this,DrillActivity.class);
+        startActivity(intent);
     }
 }
